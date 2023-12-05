@@ -29,7 +29,7 @@ void checkRDP(char *filename, char *outputf)
         struct sockaddr_in server;
         server.sin_family = AF_INET;
         server.sin_addr.s_addr = inet_addr(address);
-        server.sin_port = htons(80);
+        server.sin_port = htons(3389);
         if (connect(sock, (struct sockaddr *)&server, sizeof(server)) < 0){
             printf("Closed: %s\r", address);
         }else{
